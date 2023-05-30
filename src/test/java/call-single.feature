@@ -3,7 +3,7 @@ Feature:: common setup
 
   Scenario: common setup
 
-    * def isResponseStatus200Setup =
+    * def isResponseStatus200_callSingle =
     """
     function() {
       if( responseStatus != 200){
@@ -11,13 +11,5 @@ Feature:: common setup
         return false;
       }
       return true;
-    }
-    """
-
-    * def printResponseStatus =
-    """
-    function() {
-
-      karate.log("responseStatus: " + karate.get('responseStatus'));
     }
     """
